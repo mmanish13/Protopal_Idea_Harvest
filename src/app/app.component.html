@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -18,4 +18,24 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue">
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#">
+      <mdb-icon far icon="address-book"></mdb-icon> ProtoPal
+    </a>
+  </mdb-navbar-brand>
+</mdb-navbar>
+<!-- Default form login -->
+<form class="offset-md-4 col-md-4 offset-md-4 text-center border border-light p-5">
+  <!-- Email -->
+  <input  mdbInput [(ngModel)]="username" type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Login ID"  name="username" >
+  <!-- Password -->
+  <input   mdbInput [(ngModel)]="password"  type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"  name="password">
+  <!-- Sign in button -->
+  <button type="submit" (click)="login()" class="btn btn-primary btn-md">
+    Log In
+  </button>
+</form>
+<!-- Default form login -->
