@@ -9,7 +9,8 @@ import { uploadStatus } from './../upload-protocol/upload-protocol.component';
   styleUrls: ['./active-draft-protocol.component.scss']
 })
 export class ActiveDraftProtocolComponent implements OnInit {
-@Input() saveprotocol : boolean;
+  showprotocol : boolean;
+  showpop = true;
   
 
   constructor(private router: Router){}
@@ -17,7 +18,11 @@ export class ActiveDraftProtocolComponent implements OnInit {
   
      this.router.navigate(["Upload-Protocol"]);         
   }
-
+  UploadProtocol()
+  {
+    this.showprotocol = true;
+    this.showpop = false;
+  }
 
   ngOnInit() {
     

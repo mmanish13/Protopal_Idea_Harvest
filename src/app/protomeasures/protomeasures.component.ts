@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./protomeasures.component.scss']
 })
 export class ProtomeasuresComponent implements OnInit {
-public   overallrisk : boolean;
+public   overallrisk = true;
   public treatmentarm : boolean ;
 
   constructor() { }
