@@ -1,10 +1,9 @@
-
-
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue"> 
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue fixed-top">
   <mdb-navbar-brand>
-    <img src='./assets/Cognizant.png'/> &nbsp;
+    <img src="./assets/Cognizant.png" style="size: 1px"> &nbsp;
+
     <a class="navbar-brand" href="#">
-        <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal
+      <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal
     </a>
   </mdb-navbar-brand>
   <links>
@@ -14,25 +13,12 @@
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a routerLink="/Find-Similar-Studies" class="nav-link waves-light" mdbWavesEffect>Find Similar Studies</a>
-      </li>   
-    
+      </li>
     </ul>
     <span class="navbar-text white-text">
-        <i class="fas fa-male"></i>John Smith
-      </span>
+      <i class="fas fa-user-tie"></i> John Smith
       <br>
-      <br>
-      &nbsp;
-      <span class="navbar-text white-text">
-          <i class="fas fa-tags"></i>Protocol Author
-        </span>
+      <i class="fas fa-tags"></i> Protocol Author
+    </span>
   </links>
-  
 </mdb-navbar>
-<br>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>  
-
-
-<!-- Default form login -->

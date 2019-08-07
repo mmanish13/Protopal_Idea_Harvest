@@ -9,40 +9,12 @@
         <!-- Password -->
         <input type="password"  class="form-control mb-4" placeholder="Password"  [(ngModel)]="password">
       
-        <div class="d-flex justify-content-around">
-          <div>
-            <!-- Remember me -->
-            <mdb-checkbox [default]="true">Remember me</mdb-checkbox>
-          </div>
-          <div>
-            <!-- Forgot password -->
-            <a href="">Forgot password?</a>
-          </div>
-        </div>
+  
       
         <!-- Sign in button -->
         <button mdbBtn color="info" block="true" class="col-md-6" type="submit" (click)="login()">Sign In</button>
       
-        <!-- Register -->
-        <p>Not a member?
-          <a href="">Register</a>
-        </p>
-      
-        <!-- Social login -->
-        <p>or sign in with:</p>
-      
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="facebook"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="linkedin"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="github"></mdb-icon>
-        </a>
+        
       
     </div>
       <!-- Default form login -->

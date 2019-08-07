@@ -11,6 +11,9 @@ import { uploadStatus } from './../upload-protocol/upload-protocol.component';
 export class ActiveDraftProtocolComponent implements OnInit {
   showprotocol : boolean;
   showpop = true;
+  therapauticArea ;
+  phase;
+  studyType;
   
 
   constructor(private router: Router){}
@@ -22,6 +25,16 @@ export class ActiveDraftProtocolComponent implements OnInit {
   {
     this.showprotocol = true;
     this.showpop = false;
+    this.therapauticArea = '';
+    this.studyType = '';
+    this.phase = '';
+  }
+
+  cancel()
+  {
+    this.therapauticArea = '';
+    this.studyType = '';
+    this.phase = '';
   }
 
   ngOnInit() {
