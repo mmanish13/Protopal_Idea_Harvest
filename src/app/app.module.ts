@@ -12,7 +12,7 @@ import { FindSimilarStudiesComponent } from './find-similar-studies/find-similar
 import { UploadProtocolComponent } from './upload-protocol/upload-protocol.component';
 import { StorageServiceModule } from 'ngx-webstorage-service';
 import { ProtomeasuresComponent } from './protomeasures/protomeasures.component';
-
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   { path: 'viewProtocol', component: ViewProtocolComponent },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'Find-Similar-Studies', component: FindSimilarStudiesComponent },
   { path: 'Upload-Protocol', component: UploadProtocolComponent },
   { path: 'About', component: ProtomeasuresComponent },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'header', component: HeaderComponent },
+  { path: '**',pathMatch: 'full',redirectTo: 'login'},
   
 ];
 
@@ -36,6 +37,7 @@ const routes: Routes = [
     FindSimilarStudiesComponent,
     UploadProtocolComponent,
     ProtomeasuresComponent,
+    HeaderComponent
     
   ],
   imports: [

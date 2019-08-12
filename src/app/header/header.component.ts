@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { LoginService } from '../login/login.service';
+import { LoggedInUserEventArgs } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  isUserLogged = false;
+  user: LoggedInUserEventArgs;
+  shownavbar : boolean;
+  constructor(private router: Router,private loginService: LoginService) { }
 
   ngOnInit() {
- 
-  }
+    this.loginService.$isLoggedIn
+      .subscribe( (data) => {        
+          this.isUserLogged = true;
+          this.user = data;
+          if(this.user.user == "codewithsrini")
+          {
+            this.shownavbar = true;
+          }
+      })
 
+}
 }

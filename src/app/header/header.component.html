@@ -1,4 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue fixed-top">
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue fixed-top">
   <mdb-navbar-brand>
     <img src="./assets/Cognizant.png" style="size: 1px"> &nbsp;
 
@@ -21,4 +21,37 @@
       <i class="fas fa-tags"></i> Protocol Author
     </span>
   </links>
+</mdb-navbar> -->
+
+
+
+<mdb-navbar *ngIf= "shownavbar" SideClass="navbar navbar-expand-lg navbar-dark blue"> 
+  <mdb-navbar-brand>
+    <img src='./assets/Cognizant.png'/> &nbsp;
+    <a class="navbar-brand" href="#">
+        <mdb-icon fas icon="podcast"></mdb-icon> ProtoPal
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Active-Draft-Protocol" class="nav-link waves-light" mdbWavesEffect>Active Draft Protocol</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/Find-Similar-Studies" class="nav-link waves-light" mdbWavesEffect>Find Similar Studies</a>
+      </li>   
+    
+    </ul>
+    <p class="navbar-text white-text">
+      <i class="fas fa-id-badge"></i> &nbsp; John Smith 
+    </p>
+      
+      
+      <p class="navbar-text white-text">
+          <i class="fas fa-tags"></i> &nbsp; Protocol Author
+      </p>
+        
+     
+  </links>
+  
 </mdb-navbar>
