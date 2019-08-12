@@ -26,4 +26,12 @@ export class HeaderComponent implements OnInit {
       })
 
 }
+
+logout()
+{
+  this.user.user = "dsffdsgf";
+  
+  this.shownavbar = false;
+}
+  
 }
